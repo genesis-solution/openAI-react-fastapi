@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,500&display=swap");
+
+/* Edge, Firefox */
+* {
+  scrollbar-width: none !important;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+pre {
+  white-space: pre-wrap; /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+@layer components {
+  .message {
+    @apply flex items-end mb-0.5 text-xs sm:text-base;
+  }
+
+  .sent {
+    @apply justify-end;
+  }
+  .sent > div {
+    @apply flex-row-reverse flex-shrink-0;
+  }
+  .sent > div > section {
+    @apply mt-1;
+  }
+  .sent > div > div {
+    @apply flex-col;
+  }
+
+  .received > div {
+    @apply items-baseline;
+  }
+  .received > div > section {
+    @apply mt-0.5 bg-gray-800 text-white;
+  }
+  .base-icon {
+    @apply h-8 w-8;
+  }
+  .msg a {
+    @apply underline;
+  }
+}
